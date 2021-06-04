@@ -99,7 +99,7 @@ const Home = ({ navigation }) => {
             },
             courier: {
                 avatar: images.avatar_1,
-                name: "Amy"
+                name: "Panda Boy"
             },
             menu: [
                 {
