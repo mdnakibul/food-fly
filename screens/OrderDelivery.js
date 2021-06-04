@@ -5,7 +5,8 @@ import {
     Image,
     TouchableOpacity,
     Platform,
-    StatusBar
+    StatusBar,
+    Linking
 } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import MapViewDirections from "react-native-maps-directions";
@@ -301,7 +302,7 @@ const OrderDelivery = ({ route, navigation }) => {
                                 justifyContent: 'center',
                                 borderRadius: 10
                             }}
-                            onPress={() => navigation.navigate("Home")}
+                            onPress={() => Linking.openURL('tel:01767782223')}
                         >
                             <Text style={{ ...FONTS.h4, color: COLORS.white }}>Call</Text>
                         </TouchableOpacity>
