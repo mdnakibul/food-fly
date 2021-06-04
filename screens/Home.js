@@ -20,8 +20,8 @@ const Home = ({ navigation }) => {
     const initialCurrentLocation = {
         streetName: "Suihari,Dinajpur",
         gps: {
-            latitude: 1.5496614931250685,
-            longitude: 110.36381866919922
+            latitude: 25.645318,
+            longitude: 88.643463
         }
     }
 
@@ -389,7 +389,20 @@ const Home = ({ navigation }) => {
                             borderRadius: SIZES.radius
                         }}
                     >
-                        <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
+                        <Text style={{
+                            fontFamily:'Roboto',
+                            fontSize:20,
+                            fontWeight:'500',
+                            shadowColor: "#000000",
+                            shadowOffset: {
+                                width: 1,
+                                height: 2,
+                            },
+                            shadowOpacity: 0.25,
+                            shadowRadius: 3.84,
+
+                            elevation: 6,
+                        }}>{currentLocation.streetName}</Text>
                     </View>
                 </View>
 
@@ -463,7 +476,7 @@ const Home = ({ navigation }) => {
         }
 
         return (
-            <View style={{ padding: SIZES.padding * 2 , display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <View style={{ padding: SIZES.padding * 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ ...FONTS.h1 }}>Main</Text>
                 <Text style={{ ...FONTS.h1 }}>Categories</Text>
 
@@ -607,7 +620,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.lightGray4,
-        paddingTop:  Platform.OS === 'android' ? StatusBar.currentHeight+10 : 0
+        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight + 10 : 0
     },
     shadow: {
         shadowColor: "#000",
