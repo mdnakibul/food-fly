@@ -99,7 +99,7 @@ const Home = ({ navigation }) => {
             },
             courier: {
                 avatar: images.avatar_1,
-                name: "Panda Boy"
+                name: "Kuddus"
             },
             menu: [
                 {
@@ -142,7 +142,7 @@ const Home = ({ navigation }) => {
             },
             courier: {
                 avatar: images.avatar_2,
-                name: "Jackson"
+                name: "Jamal"
             },
             menu: [
                 {
@@ -193,7 +193,7 @@ const Home = ({ navigation }) => {
             },
             courier: {
                 avatar: images.avatar_3,
-                name: "James"
+                name: "Kamal"
             },
             menu: [
                 {
@@ -220,7 +220,7 @@ const Home = ({ navigation }) => {
             },
             courier: {
                 avatar: images.avatar_4,
-                name: "Ahmad"
+                name: "Montu Miya"
             },
             menu: [
                 {
@@ -242,12 +242,12 @@ const Home = ({ navigation }) => {
             photo: images.noodle_shop,
             duration: "15 - 20 min",
             location: {
-                latitude: 25.630911319199754, 
+                latitude: 25.630911319199754,
                 longitude: 8.63532471083793,
             },
             courier: {
                 avatar: images.avatar_4,
-                name: "Muthu"
+                name: "Mokbul"
             },
             menu: [
                 {
@@ -295,12 +295,12 @@ const Home = ({ navigation }) => {
             photo: images.kek_lapis_shop,
             duration: "35 - 40 min",
             location: {
-                latitude:25.629910440530953, 
+                latitude: 25.629910440530953,
                 longitude: 88.64786581083794,
             },
             courier: {
                 avatar: images.avatar_1,
-                name: "Jessie"
+                name: "Gonu Molla"
             },
             menu: [
                 {
@@ -522,16 +522,16 @@ const Home = ({ navigation }) => {
                             position: 'absolute',
                             bottom: 0,
                             height: 50,
-                            width: SIZES.width * 0.3,
+                            width: '100%',
                             backgroundColor: COLORS.white,
-                            borderTopRightRadius: SIZES.radius,
-                            borderBottomLeftRadius: SIZES.radius,
+                            borderRadius:SIZES.radius,
                             alignItems: 'center',
                             justifyContent: 'center',
                             ...styles.shadow
                         }}
                     >
-                        <Text style={{ ...FONTS.h4 }}>{item.duration}</Text>
+                        <Text style={{ ...FONTS.h4 }}>{item.menu[0].name}</Text>
+                        <Text style={{ ...FONTS.body4 }}>{item.duration}</Text>
                     </View>
                 </View>
 
