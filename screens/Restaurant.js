@@ -6,7 +6,9 @@ import {
     Text,
     TouchableOpacity,
     Image,
-    Animated
+    Animated,
+    Platform,
+    StatusBar
 } from "react-native";
 import { isIphoneX } from 'react-native-iphone-x-helper'
 
@@ -435,7 +437,8 @@ const Restaurant = ({ route, navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.lightGray2
+        backgroundColor: COLORS.lightGray2,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 10 : 0
     }
 })
 
