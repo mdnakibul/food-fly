@@ -6,7 +6,9 @@ import {
     StyleSheet,
     TouchableOpacity,
     Image,
-    FlatList
+    FlatList,
+    Platform,
+    StatusBar
 } from "react-native";
 
 import { icons, images, SIZES, COLORS, FONTS } from '../constants'
@@ -16,7 +18,7 @@ const Home = ({ navigation }) => {
     // Dummy Datas
 
     const initialCurrentLocation = {
-        streetName: "Kuching",
+        streetName: "Suihari,Dinajpur",
         gps: {
             latitude: 1.5496614931250685,
             longitude: 110.36381866919922
@@ -85,7 +87,7 @@ const Home = ({ navigation }) => {
     const restaurantData = [
         {
             id: 1,
-            name: "ByProgrammers Burger",
+            name: "The Sky Restaurant",
             rating: 4.8,
             categories: [5, 7],
             priceRating: affordable,
@@ -128,7 +130,7 @@ const Home = ({ navigation }) => {
         },
         {
             id: 2,
-            name: "ByProgrammers Pizza",
+            name: "Happy Tree Restaurant",
             rating: 4.8,
             categories: [2, 4, 6],
             priceRating: expensive,
@@ -179,7 +181,7 @@ const Home = ({ navigation }) => {
         },
         {
             id: 3,
-            name: "ByProgrammers Hotdogs",
+            name: "Rolex Restaurant",
             rating: 4.8,
             categories: [3],
             priceRating: expensive,
@@ -206,7 +208,7 @@ const Home = ({ navigation }) => {
         },
         {
             id: 4,
-            name: "ByProgrammers Sushi",
+            name: "Sanonda Restaurant",
             rating: 4.8,
             categories: [8],
             priceRating: expensive,
@@ -233,7 +235,7 @@ const Home = ({ navigation }) => {
         },
         {
             id: 5,
-            name: "ByProgrammers Cuisine",
+            name: "Martin Restaurant",
             rating: 4.8,
             categories: [1, 2],
             priceRating: affordable,
@@ -286,7 +288,7 @@ const Home = ({ navigation }) => {
         {
 
             id: 6,
-            name: "ByProgrammers Dessets",
+            name: "Chilekotha Restaurant",
             rating: 4.9,
             categories: [9, 10],
             priceRating: affordable,
@@ -461,7 +463,7 @@ const Home = ({ navigation }) => {
         }
 
         return (
-            <View style={{ padding: SIZES.padding * 2 }}>
+            <View style={{ padding: SIZES.padding * 2 , display:'flex',alignItems:'center',justifyContent:'center'}}>
                 <Text style={{ ...FONTS.h1 }}>Main</Text>
                 <Text style={{ ...FONTS.h1 }}>Categories</Text>
 
@@ -604,7 +606,8 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.lightGray4
+        backgroundColor: COLORS.lightGray4,
+        paddingTop:  Platform.OS === 'android' ? StatusBar.currentHeight+10 : 0
     },
     shadow: {
         shadowColor: "#000",
