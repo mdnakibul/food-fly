@@ -3,7 +3,9 @@ import {
     View,
     Text,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Platform,
+    StatusBar
 } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import MapViewDirections from "react-native-maps-directions";
@@ -371,7 +373,7 @@ const OrderDelivery = ({ route, navigation }) => {
     }
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, paddingTop: Platform.OS === "android" ? StatusBar.currentHeight+10 : 0 }}>
             {renderMap()}
             {renderDestinationHeader()}
             {renderDeliveryInfo()}
