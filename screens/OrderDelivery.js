@@ -302,7 +302,7 @@ const OrderDelivery = ({ route, navigation }) => {
                                 justifyContent: 'center',
                                 borderRadius: 10
                             }}
-                            onPress={() => Linking.openURL('tel:01767782223')}
+                            onPress={() => Linking.openURL('tel:+880123456789')}
                         >
                             <Text style={{ ...FONTS.h4, color: COLORS.white }}>Call</Text>
                         </TouchableOpacity>
