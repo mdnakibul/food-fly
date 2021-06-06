@@ -16,6 +16,7 @@ export const noodle = require("../assets/icons/noodle.png");
 export const pin = require("../assets/icons/pin.png");
 export const pizza = require("../assets/icons/pizza.png");
 export const red_pin = require("../assets/icons/red-pin.png");
+
 export const rice_bowl = require("../assets/icons/rice-bowl.png");
 export const salad = require("../assets/icons/salad.png");
 export const search = require("../assets/icons/search.png");
@@ -50,4 +51,4 @@ export default {
     star,
     sushi,
     user,
-}
+};

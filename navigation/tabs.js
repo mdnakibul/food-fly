@@ -4,13 +4,13 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native';
-import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
+import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs";
 import Svg, { Path } from 'react-native-svg';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 
-import { Home } from "../screens"
+import { Home } from "../screens";
 
-import { COLORS, icons } from "../constants"
+import { COLORS, icons } from "../constants";
 
 const Tab = createBottomTabNavigator();
 
@@ -97,7 +97,6 @@ const CustomTabBar = (props) => {
     }
 
 }
-
 const Tabs = () => {
     return (
         <Tab.Navigator
@@ -214,4 +213,4 @@ const Tabs = () => {
     )
 }
 
-export default Tabs
+export default Tabs;
